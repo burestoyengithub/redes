@@ -1,0 +1,10 @@
+1.3
+    Si que é posible enviar varias mensaxes e recibilas co mesmo recv, sempre que o buffer do recv teña o suficiente tamanaño.
+    No caso do meu programa probei a enviar varias veces o mesaxe de saúdo e foi capaz de recollelo todo como mesmo recv, xa que ten un buffer grande (1024)
+
+1.4
+    Execuntando un bucle como :
+        while(len(self.client.recv(1024))>0: ....
+    Xerase un bucle infinito, xa que despois da primeira execucion (11 bytes no meu caso), o servidor non envia nada novo e o cliente queda a espera 
+    de novos datos.
+    A maneira correcta de implementalo é a usada no exercicio 2.

@@ -1,0 +1,10 @@
+1.c
+    Cando se envian máis datos dos do tamaño do buffer os datos restantes pérdense(ao contrario que con tcp). Intentei recuperar os datos
+    utilizando un bucle de recepcions pero non funciona.
+
+1.d
+    Crearonse con exito os programas de traballo con floats, coa libreria struc non supon apenas cambios no codigo orixinal
+
+3.
+    O servidor é capaz de atender dos clientes de maneira simultanea. Isto podese probar, para ello deixei outro ficheiro txt que utilizo no segundo 
+    cliente para comprobar que funciona todo correctamente.
