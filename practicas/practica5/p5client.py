@@ -8,6 +8,8 @@ class tcp_client():
         
             datos=self.client.recv(1024) #recepcion de datos (ata 1024 bytes)
             print("Chegaron", len(datos),"bytes ->", datos.decode()) #xa que cada letra e un byte a lonxitude dos bytes recibidos e len(datos)
+            datos=self.client.recv(1024) #recepcion de datos (ata 1024 bytes)
+            print("Chegaron", len(datos),"bytes ->", datos.decode()) #xa que cada letra e un byte a lonxitude dos bytes recibidos e len(datos)
             self.client.close() #peche do socket
         except:
             self.manexo_errores() #manexo de erros
@@ -20,8 +22,9 @@ class tcp_client():
         print("Nome de error: ",e[0].__name__)
         print("Explicacion de error: ",e[1])        
 
-try:
+try: 
     Ip=None
+    porto=None
     opts, args = getopt.getopt(sys.argv[1:], "n:i:p:", ["port"]) #solicitude de datos por pantalla
 
     for opt, arg in opts:

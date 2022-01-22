@@ -18,8 +18,10 @@ class tcp_server():
 
     def say_hello(self):
         """envia un saudo ao cliente"""
-        
-        n=self.conn.send(("ola que tal").encode())
+
+        mensage = "HTTP/1.0 200 OK\n\nHello World"
+
+        n=self.conn.send((mensage).encode())
         #print(n)    #número de bytes enviados
 
     def manexo_errores(self):
